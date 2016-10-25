@@ -22,7 +22,7 @@ only need to install Vagrant, and VirtualBox.
 
 # Architecture
 
-+-----+ transit1-good    transit2-bad  transit3-mixed   (traffic generators)
++-----+ transit1-good    transit2-bad  transit3-mixed   (traffic generators)<br>
 |     |            \         |         /
 |     |             \        |        /
 |     |              \       |       /
