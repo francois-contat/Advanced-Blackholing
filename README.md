@@ -5,10 +5,14 @@
 
 Vagrant files in order to reproduce de PoC of ABH.
 
-ABH, for Advanced Blackholing, intends to use uRPF and diverting traffic through routing protocols in order to mitigate DDoS
+ABH, for Advanced Blackholing, intends to use uRPF and diverting traffic through routing protocols in order to mitigate DDoS.
+
 This projects reproduce a simple architecture with 3 transit providers, a backbone and 2 customers.
+
 Pings are generated through transit providers to WWW1.
+
 The ABH router advertises the route of the attacked service, redirect it through a GRE tunnel directly to BB2 to finally reach the WWW1 server.
+
 The traffic is then forced to flow through ABH-router which will mitigate traffic with uRPF by simply receiving routes of IPs we want to blackhole.
 
 This technique was presented on october 25th 2016 at Ripe73
