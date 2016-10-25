@@ -12,8 +12,7 @@ The ABH router advertises the route of the attacked service, redirect it through
 The traffic is then forced to flow through ABH-router which will mitigate traffic with uRPF by simply receiving routes of IPs we want to blackhole.
 
 This technique was presented on october 25th 2016 at Ripe73
-
-TODO : add slides and presentation links
+https://ripe73.ripe.net/presentations/62-spinoff.pdf
 
 ## Try it yourself
 
