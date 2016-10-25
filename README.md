@@ -22,28 +22,18 @@ only need to install Vagrant, and VirtualBox.
 
 # Architecture
 
-+-----+ transit1-good    transit2-bad  transit3-mixed   (traffic generators)<br>
-|     |            \         |         /
-|     |             \        |        /
-|     |              \       |       /
-|eBGP |               \      |      /
-|     |                \     |     /
-|     |                 \    |    /
-|     |                  \   |   /
-|     |                   \  |  / 
-|     |                    \ | /  
-+-----+                     BB1
-|     |                      |
-|ospf |                      |
-|+    |                      |
-|iBGP |                      |
-|     |                      |
-|     |                      |
-|     |                     BB2 --------- ABH ------- Injector
-+-----+                    /  \
-|     |                   /    \
-|eBGP |                  /      \
-+-----+                WWW1    WWW2    (potential victims)
+3 transit providers : transit1-good (AS1), transit2-bad (AS2), transit3-mixed (AS3)
+
+The transit providers are all connected through eBGP with BB1
+
+Internal backbone : BB1, BB2, ABH (as 55)
+The internal backbone runs ospf and iBGP
+
+Injector : exabgp connecting through eBGP
+
+2 customers : WWW1 (AS11) and WWW2 (AS22)
+
+The customers are connected through eBGP with BB2
 
 
 ### Preliminary setup on the host
